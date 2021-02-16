@@ -1,0 +1,35 @@
+.app-title {
+  text-align: center;
+  color: #bdbdbd;
+  font-size: 5em;
+}
+
+.app-content {
+  width: 40%;
+  margin: 0 auto 3em auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.app-content > .add-todos {
+  padding: .8em;
+  font-size: 1.5em;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+.app-content > .add-todos:focus {
+  outline: none;
+}
+
+.app-content > .add-todos::placeholder {
+  font-style: italic;
+  color: #ecdcdc;
+}
+
+@media only screen and (max-width: 768px) {
+  .app-content {
+    width: 90%;
+  }
+}

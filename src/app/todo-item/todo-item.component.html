@@ -1,0 +1,32 @@
+<div
+  class="todo"
+  [class.completed]="item.completed"
+  (dblclick)="onDoubleClick()"
+>
+  <p *ngIf="!isEditing">{{ item.content }}</p>
+  <input
+    #edit
+    type="text"
+    class="edit-input"
+    maxlength="30"
+    *ngIf="isEditing"
+    [(ngModel)]="this.item.content"
+    (keyup.enter)="this.updateContent()"
+    (blur)="this.updateContent()"
+  />
+  <div class="todo-action">
+    <img
+      class="action-img"
+      *ngIf="!item.completed"
+      src="assets/check.svg"
+      (click)="updateStatus(true)"
+    />
+    <img
+      class="action-img"
+      *ngIf="item.completed"
+      src="assets/loading.svg"
+      (click)="updateStatus(false)"
+    />
+    <img class="action-img" src="assets/delete.svg" (click)="onDelete()" />
+  </div>
+</div>

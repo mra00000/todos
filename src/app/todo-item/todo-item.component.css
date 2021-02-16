@@ -1,0 +1,50 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 .8em;
+  align-items: center;
+  font-size: 1.5em;
+  background-color: #ffffff;
+  border-top: .5px solid rgba(0, 0, 0, .1);
+}
+
+.todo.completed {
+  background-color: #e8f5e9;
+}
+
+.todo > p {
+  white-space: initial;
+  word-break: break-all;
+}
+
+.todo > .edit-input {
+  padding: 1em;
+  padding-left: 0;
+  font-size: 1em;
+  flex-grow: 1;
+  box-sizing: border-box;
+  background-color: inherit;
+  outline: none;
+  border: none;
+}
+
+.todo > .edit-input:focus {
+  outline: none;
+  border: none;
+}
+
+.action-img {
+  width: .6em;
+  height: auto;
+  margin-left: 1em;
+}
+
+.todo > .todo-action {
+  opacity: 0;
+  transition: opacity .5s;
+  display: flex;
+}
+
+.todo:hover > .todo-action {
+  opacity: 100%;
+}
